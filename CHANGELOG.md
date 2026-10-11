@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1.1 — 2026-10-11
+
+- Fixed return-use form options: quote Yes/No so YAML treats them as strings and GitHub renders the structured form rather than falling back to a blank issue.
+- Retested the live GitHub form; no fabricated report was submitted.
+
 ## v1.1.0 — 2026-10-11
 
 ### Browser learning release
