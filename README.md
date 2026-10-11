@@ -148,3 +148,5 @@ MIT licensed. Contributions that include correctness evidence and reproducible m
 
 Try the quick start, report a reproducible issue, or pick a small documentation improvement.
 See [CONTRIBUTING.md](CONTRIBUTING.md) for reporting details, development checks and evidence expected for changes.
+
+[Illustrated A* walkthrough](https://mohammmad357.github.io/maze-signal/learn.html) · [Feedback forms](https://mohammmad357.github.io/maze-signal/feedback.html) · [Changelog](CHANGELOG.md)

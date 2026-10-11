@@ -54,3 +54,5 @@ python tools/experiment.py --binary build/solver.exe --size 160 --repeat 30 --sa
 [معرفی ۶۰ثانیه‌ای](https://mohammmad357.github.io/maze-signal/intro.gif) · [قرارداد و روش آزمون](docs/README.md)
 
 پیاده‌سازی JavaScript روی ۵۰۵ نقشه و دو الگوریتم با خروجی Python و C تطبیق داده شده است. سرعت انیمیشن معیار عملکرد نیست. معرفی به‌صورت GIF بی‌صدا و تولیدشده از خروجی واقعی الگوریتم است.
+
+[مطلب تصویری دربارهٔ A*](https://mohammmad357.github.io/maze-signal/learn.html) · [فرم بازخورد](https://mohammmad357.github.io/maze-signal/feedback.html) · [تغییرات نسخه](CHANGELOG.md)
