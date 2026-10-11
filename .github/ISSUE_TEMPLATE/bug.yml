@@ -1,0 +1,32 @@
+name: Reproducible bug / گزارش باگ
+description: Steps, expected and actual results for a reproducible defect.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: Reports are public. Remove personal details and secrets from screenshots.
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / مراحل بازتولید
+      description: Include example, paint tool, cells edited, and run/reset/pause sequence.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior / نتیجه مورد انتظار
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior / نتیجه واقعی
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser, device type and release/commit
+    validations:
+      required: true

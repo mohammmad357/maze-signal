@@ -1,0 +1,50 @@
+name: First-use feedback / بازخورد اولین استفاده
+description: Three questions after trying Maze Signal without guidance.
+title: "[Feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Try https://mohammmad357.github.io/maze-signal/ first, without a walkthrough.
+        Reports are PUBLIC. Do not include names, emails, private files or credentials.
+        پاسخ فارسی هم پذیرفته است؛ اطلاعات شخصی ننویسید.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Main category / نوع بازخورد
+      options:
+        - Confusing experience / ابهام
+        - Bug / باگ
+        - Feature request / درخواست قابلیت
+        - Worked as expected / طبق انتظار
+    validations:
+      required: true
+  - type: textarea
+    id: confusing
+    attributes:
+      label: Where did you get confused? / کجا گیج شدی؟
+      description: Include the control or step. Say none if nothing was confusing.
+    validations:
+      required: true
+  - type: textarea
+    id: useful
+    attributes:
+      label: What was useful? / چه چیزی مفید بود؟
+    validations:
+      required: true
+  - type: textarea
+    id: missing
+    attributes:
+      label: What is missing? / چه چیزی کم بود؟
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device type / مرورگر و نوع دستگاه
+      placeholder: e.g. Chrome on desktop, Safari on phone; no personal identifiers
+  - type: input
+    id: version
+    attributes:
+      label: Release or commit tested
+      placeholder: v1.1.0 or a commit SHA; main changes over time

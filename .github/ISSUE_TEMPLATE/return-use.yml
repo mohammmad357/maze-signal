@@ -1,0 +1,32 @@
+name: Return-use follow-up / بازگشت به استفاده
+description: Tell us whether you actually used the demo again, and why.
+title: "[Return use] "
+body:
+  - type: markdown
+    attributes:
+      value: Answer only about your own use. A star or download is not a return visit. Reports are public; omit personal information.
+  - type: dropdown
+    id: returned
+    attributes:
+      label: Did you use the demo again after your first visit?
+      options:
+        - Yes
+        - No
+        - Not enough time has passed
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why did you return, or why not? / چرا برگشتی یا برنگشتی؟
+    validations:
+      required: true
+  - type: textarea
+    id: use
+    attributes:
+      label: What did you actually do on the return visit?
+      description: Leave blank if you did not return.
+  - type: input
+    id: version
+    attributes:
+      label: Release/commit and approximate gap between visits
