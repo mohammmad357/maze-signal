@@ -21,6 +21,9 @@ The standalone search module uses no npm packages. Node.js is only needed for th
 
 ```sh
 node docs/verify.cjs
+# After compiling C, optionally regenerate the fixtures:
+python tools/make_web_fixtures.py
+node docs/verify.cjs
 ```
 
 `fixtures.json` contains 5 fixed and 500 seed-357 random maps, generated from Python and cross-checked against C at source commit `ad47871694160f0a2efc45b9f4594b6405cff06d`. Verification compares JavaScript cost, route, expanded count and visitation order with Python; cost, route and expanded count were also matched against C. The existing Python test suite checks these map cases against an independent Bellman-Ford reference. Eight invalid inputs, overlapping endpoints and a maximum-size demo grid are also checked.
