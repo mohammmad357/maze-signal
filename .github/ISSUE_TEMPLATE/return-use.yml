@@ -10,8 +10,8 @@ body:
     attributes:
       label: Did you use the demo again after your first visit?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
         - Not enough time has passed
     validations:
       required: true
