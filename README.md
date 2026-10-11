@@ -17,6 +17,14 @@
 
 </div>
 
+## Try the browser demo
+
+[Open the live editor](https://mohammmad357.github.io/maze-signal/) — no installation. Paint walls and weights, move endpoints, then compare Dijkstra and A* on the same map. Includes keyboard controls, pause/reset, a no-route example and a Persian guide.
+
+[Watch the 60-second tour](https://mohammmad357.github.io/maze-signal/intro.gif) · [Demo contract and verification](docs/README.md)
+
+The JavaScript implementation matches 505 fixed/seeded Python/C map fixtures (1010 algorithm comparisons). The browser compares optimal cost and expanded cells; animation speed is not a Python/C benchmark. The tour is an algorithm-generated silent GIF.
+
 ## The challenge
 
 Find the **minimum-cost route**, moving up, down, left or right. Walls block movement; expensive terrain can make a longer route cheaper.
