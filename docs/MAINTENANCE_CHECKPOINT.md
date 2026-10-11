@@ -1,4 +1,4 @@
-# Maintenance checkpoint · 2026-10-11
+# Maintenance checkpoint Â· 2026-10-11
 
 This is an **early review of the plan's week-eight stage**, performed on the
 owner's request to advance the next ten tasks. Eight calendar weeks have not
@@ -15,10 +15,11 @@ elapsed. It is a dated snapshot, not a retention study or a growth claim.
 - A draft upstream contribution [TheAlgorithms/Python #15554](https://github.com/TheAlgorithms/Python/pull/15554)
   fixes the hardcoded phase count for lists longer than ten. Existing earlier
   work is credited. Local eight-case comparisons and ten doctests passed.
-- An independent one-line Goldbach fix allows equal-prime pairs for 4 and 6.
+- The independent draft [TheAlgorithms/Python #15555](https://github.com/TheAlgorithms/Python/pull/15555)
+  allows equal-prime Goldbach pairs for 4 and 6.
   A scoped harness checked 249 even inputs and 19 related doctests; full
-  upstream import/testing requires a newer interpreter. Its submission and
-  CI status must be read from the eventual PR, not inferred from this document.
+  upstream import/testing requires a newer interpreter. Its actual submission is confirmed; upstream CI and review are pending.
+  Local success does not establish the full upstream suite.
 
 Both repositories showed zero stars and zero forks in the API snapshot. This
 is a starting measurement, not evidence of a successful audience campaign.
