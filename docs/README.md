@@ -41,3 +41,9 @@ Open http://localhost:8000. GitHub Pages serves `main` → `/docs`.
 [Watch the 60-second GIF](intro.gif). It has 12 five-second scenes, with a problem, search footprints, a changed wall, an open-grid comparison, a no-route case and the live URL. The illustration is generated from the real Python solver; it is not a screen recording. It is silent and repeats. The page links it separately so the animation does not load until requested.
 
 English is the primary demo language; the page includes a Persian guide. MIT licensed. Development used AI coding assistance. Browser checks do not replace testing on physical phones or an independent outside-user review.
+
+## v1.2.0 maintenance improvements
+
+On first load, an OS reduced-motion preference selects Instant; manual speed choices still work. Other visitors keep the Normal default. Reset does not overwrite a chosen animation speed.
+
+Open **Export this map for Python / C** to select the read-only CLI map text. It updates after edits, preset changes and reset, preserves endpoints/walls/weights, and uses dimensions followed by exactly that many rows. Save it as plain text and pass the file to either solver. This is export only: no import, download, clipboard permission or network transmission.

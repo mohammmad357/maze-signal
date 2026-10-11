@@ -43,7 +43,12 @@ function renderGrid(algorithm, rebuild) {
   const values = complete ? [result.cost === null ? 'No route' : result.cost, result.cost === null ? '—' : result.path.length - 1, result.expanded] : ['—', '—', '—'];
   $('metrics-' + algorithm).querySelectorAll('b').forEach((b, i) => {b.textContent = String(values[i]);});
 }
-function render(rebuild = false) {algorithms.forEach(a => renderGrid(a, rebuild));}
+function render(rebuild = false) {
+  algorithms.forEach(a => renderGrid(a, rebuild));
+  const rows = [];
+  for (let r = 0; r < map.height; r++) rows.push(map.cells.slice(r * map.width, (r + 1) * map.width).join(''));
+  $('map-text').value = `${map.height} ${map.width}\n${rows.join('\n')}\n`;
+}
 function loadExample() {stop(); focused.dijkstra = focused.astar = 0; map = MazeSearch.parse(examples[$('example').value]); results = null; shown = {dijkstra: 0, astar: 0}; render(true); $('status').textContent = 'Ready. Paint a cell or run the comparison.';}
 function edit(i, mode = $('tool').value) {
   if (!Number.isInteger(i) || i < 0 || i >= map.cells.length) return;
@@ -82,5 +87,7 @@ algorithms.forEach(a => {
 window.addEventListener('pointerup', () => {paint = null;});
 window.addEventListener('pointercancel', () => {paint = null;});
 $('tool').addEventListener('change', updateTool);
+// Respect the OS preference only on first load; the user can still choose a speed.
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) $('speed').value = '0';
 updateTool();
 loadExample();
