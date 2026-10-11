@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="440" viewBox="0 0 920 440" role="img" aria-labelledby="title desc">
+<title id="title">Four moves cost 28. Eight moves cost 8.</title>
+<desc id="desc">Two copies of the same three-row five-column grid. The direct route crosses three weight-nine cells. The detour follows the bottom row and costs eight.</desc>
+<rect width="920" height="440" rx="20" fill="#101b2e"/>
+<g font-family="Arial, sans-serif" fill="#f5f7ff"><text x="40" y="42" font-size="25" font-weight="bold">SAME MAP. DIFFERENT OBJECTIVE.</text>
+<text x="40" y="87" font-size="19" fill="#ffa798">DIRECT · 4 MOVES · COST 28</text>
+<rect x="40" y="112" width="66" height="66" rx="8" fill="#203a50"/><text x="73" y="154" text-anchor="middle" font-size="24">S</text>
+<rect x="114" y="112" width="66" height="66" rx="8" fill="#693632"/><text x="147" y="154" text-anchor="middle" font-size="24">9</text>
+<rect x="188" y="112" width="66" height="66" rx="8" fill="#693632"/><text x="221" y="154" text-anchor="middle" font-size="24">9</text>
+<rect x="262" y="112" width="66" height="66" rx="8" fill="#693632"/><text x="295" y="154" text-anchor="middle" font-size="24">9</text>
+<rect x="336" y="112" width="66" height="66" rx="8" fill="#203a50"/><text x="369" y="154" text-anchor="middle" font-size="24">G</text>
+<rect x="40" y="186" width="66" height="66" rx="8" fill="#203a50"/><text x="73" y="228" text-anchor="middle" font-size="24">.</text>
+<rect x="114" y="186" width="66" height="66" rx="8" fill="#35455d"/><text x="147" y="228" text-anchor="middle" font-size="24">#</text>
+<rect x="188" y="186" width="66" height="66" rx="8" fill="#35455d"/><text x="221" y="228" text-anchor="middle" font-size="24">#</text>
+<rect x="262" y="186" width="66" height="66" rx="8" fill="#35455d"/><text x="295" y="228" text-anchor="middle" font-size="24">#</text>
+<rect x="336" y="186" width="66" height="66" rx="8" fill="#203a50"/><text x="369" y="228" text-anchor="middle" font-size="24">.</text>
+<rect x="40" y="260" width="66" height="66" rx="8" fill="#203a50"/><text x="73" y="302" text-anchor="middle" font-size="24">.</text>
+<rect x="114" y="260" width="66" height="66" rx="8" fill="#203a50"/><text x="147" y="302" text-anchor="middle" font-size="24">.</text>
+<rect x="188" y="260" width="66" height="66" rx="8" fill="#203a50"/><text x="221" y="302" text-anchor="middle" font-size="24">.</text>
+<rect x="262" y="260" width="66" height="66" rx="8" fill="#203a50"/><text x="295" y="302" text-anchor="middle" font-size="24">.</text>
+<rect x="336" y="260" width="66" height="66" rx="8" fill="#203a50"/><text x="369" y="302" text-anchor="middle" font-size="24">.</text>
+<polyline points="73,145 147,145 221,145 295,145 369,145" fill="none" stroke="#ff9989" stroke-opacity="0.8" stroke-width="6" stroke-linejoin="round"/>
+<text x="490" y="87" font-size="19" fill="#67e8cf">OPTIMAL · 8 MOVES · COST 8</text>
+<rect x="490" y="112" width="66" height="66" rx="8" fill="#203a50"/><text x="523" y="154" text-anchor="middle" font-size="24">S</text>
+<rect x="564" y="112" width="66" height="66" rx="8" fill="#693632"/><text x="597" y="154" text-anchor="middle" font-size="24">9</text>
+<rect x="638" y="112" width="66" height="66" rx="8" fill="#693632"/><text x="671" y="154" text-anchor="middle" font-size="24">9</text>
+<rect x="712" y="112" width="66" height="66" rx="8" fill="#693632"/><text x="745" y="154" text-anchor="middle" font-size="24">9</text>
+<rect x="786" y="112" width="66" height="66" rx="8" fill="#203a50"/><text x="819" y="154" text-anchor="middle" font-size="24">G</text>
+<rect x="490" y="186" width="66" height="66" rx="8" fill="#203a50"/><text x="523" y="228" text-anchor="middle" font-size="24">.</text>
+<rect x="564" y="186" width="66" height="66" rx="8" fill="#35455d"/><text x="597" y="228" text-anchor="middle" font-size="24">#</text>
+<rect x="638" y="186" width="66" height="66" rx="8" fill="#35455d"/><text x="671" y="228" text-anchor="middle" font-size="24">#</text>
+<rect x="712" y="186" width="66" height="66" rx="8" fill="#35455d"/><text x="745" y="228" text-anchor="middle" font-size="24">#</text>
+<rect x="786" y="186" width="66" height="66" rx="8" fill="#203a50"/><text x="819" y="228" text-anchor="middle" font-size="24">.</text>
+<rect x="490" y="260" width="66" height="66" rx="8" fill="#203a50"/><text x="523" y="302" text-anchor="middle" font-size="24">.</text>
+<rect x="564" y="260" width="66" height="66" rx="8" fill="#203a50"/><text x="597" y="302" text-anchor="middle" font-size="24">.</text>
+<rect x="638" y="260" width="66" height="66" rx="8" fill="#203a50"/><text x="671" y="302" text-anchor="middle" font-size="24">.</text>
+<rect x="712" y="260" width="66" height="66" rx="8" fill="#203a50"/><text x="745" y="302" text-anchor="middle" font-size="24">.</text>
+<rect x="786" y="260" width="66" height="66" rx="8" fill="#203a50"/><text x="819" y="302" text-anchor="middle" font-size="24">.</text>
+<polyline points="523,145 523,219 523,293 597,293 671,293 745,293 819,293 819,219 819,145" fill="none" stroke="#67e8cf" stroke-opacity="0.8" stroke-width="6" stroke-linejoin="round"/>
+<text x="40" y="390" font-size="18">Cost is charged on entry. S = 0; . and G = 1; 9 = 9; # = wall.</text>
+<text x="40" y="420" font-size="16" fill="#b7c8de">Dijkstra and A*: cost 8; 9 expansions each on this map. Not a runtime benchmark.</text></g></svg>
