@@ -1,0 +1,23 @@
+name: correctness
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Compile C with strict warnings
+        run: mkdir -p build && gcc -std=c11 -O3 -Wall -Wextra -Wpedantic -Werror c/solver.c -o build/solver
+      - name: Verify against Bellman-Ford
+        run: python -m unittest discover -s tests -v
+      - name: Run undefined behavior and address sanitizers
+        run: |
+          gcc -std=c11 -g -fsanitize=address,undefined -fno-omit-frame-pointer c/solver.c -o build/solver-sanitized
+          SOLVER_C="$PWD/build/solver-sanitized" python -m unittest discover -s tests -v
