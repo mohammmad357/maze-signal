@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.2.0 — 2026-10-11
+
+- Respect the OS reduced-motion preference on first load by selecting Instant, while preserving manual speed selection.
+- Add keyboard-selectable, read-only CLI map export that updates after edits, resets and preset changes.
+- Address maintainer issues #2 and #3. This maintenance release follows the owner's request to fix the remaining work; no outside feedback or user rating is claimed.
+- Search algorithms and input grammar are unchanged. Physical touchscreen and independent first-use testing remain pending.
+
 ## v1.1.1 — 2026-10-11
 
 - Fixed return-use form options: quote Yes/No so YAML treats them as strings and GitHub renders the structured form rather than falling back to a blank issue.
