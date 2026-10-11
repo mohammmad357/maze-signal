@@ -8,6 +8,17 @@ const examples = {
 };
 let map, results = null, shown = {dijkstra: 0, astar: 0}, running = false, paused = false, timer = null, generation = 0, paint = null;
 const algorithms = ['dijkstra', 'astar'];
+const focused = {dijkstra: 0, astar: 0};
+function rememberFocus(algorithm, i) {
+  const grid = $('grid-' + algorithm);
+  focused[algorithm] = i;
+  Array.from(grid.children).forEach((b, index) => {b.tabIndex = index === i ? 0 : -1;});
+}
+function updateTool() {
+  const weighted = $('tool').value === 'weight';
+  $('weight').disabled = !weighted;
+  $('tool-help').textContent = weighted ? 'Terrain weight: select 1–9, then paint a non-endpoint cell.' : 'Weight applies only to Terrain weight. Select Start or Goal to move endpoints.';
+}
 function stop() {generation++; clearTimeout(timer); timer = null; running = false; paused = false; $('pause').disabled = true; $('pause').textContent = 'Pause';}
 function invalidate(message) {stop(); results = null; shown = {dijkstra: 0, astar: 0}; render(); $('status').textContent = message;}
 function labelCell(i, algorithm) {
@@ -27,13 +38,13 @@ function renderGrid(algorithm, rebuild) {
     const b = grid.children[i], c = map.cells[i];
     b.className = 'cell' + (c === '#' ? ' wall' : /^[1-9]$/.test(c) ? ' terrain' : '') + (visited.has(i) ? ' visited' : '') + (path.has(i) ? ' path' : '') + (c === 'S' ? ' start' : c === 'G' ? ' goal' : '');
     b.textContent = c !== '.' ? c : path.has(i) ? '•' : visited.has(i) ? '·' : '';
-    b.setAttribute('aria-label', labelCell(i, algorithm)); b.tabIndex = i === 0 ? 0 : -1;
+    b.setAttribute('aria-label', labelCell(i, algorithm)); b.tabIndex = i === focused[algorithm] ? 0 : -1;
   }
   const values = complete ? [result.cost === null ? 'No route' : result.cost, result.cost === null ? '—' : result.path.length - 1, result.expanded] : ['—', '—', '—'];
   $('metrics-' + algorithm).querySelectorAll('b').forEach((b, i) => {b.textContent = String(values[i]);});
 }
 function render(rebuild = false) {algorithms.forEach(a => renderGrid(a, rebuild));}
-function loadExample() {stop(); map = MazeSearch.parse(examples[$('example').value]); results = null; shown = {dijkstra: 0, astar: 0}; render(true); $('status').textContent = 'Ready. Paint a cell or run the comparison.';}
+function loadExample() {stop(); focused.dijkstra = focused.astar = 0; map = MazeSearch.parse(examples[$('example').value]); results = null; shown = {dijkstra: 0, astar: 0}; render(true); $('status').textContent = 'Ready. Paint a cell or run the comparison.';}
 function edit(i, mode = $('tool').value) {
   if (!Number.isInteger(i) || i < 0 || i >= map.cells.length) return;
   if ((mode === 'start' && i === map.goal) || (mode === 'goal' && i === map.start)) { $('status').textContent = 'Start and goal must be on different cells.'; return; }
@@ -62,6 +73,7 @@ $('example').addEventListener('change', loadExample);
 $('clear').addEventListener('click', () => {map.cells = map.cells.map(c => c === 'S' || c === 'G' ? c : '.'); invalidate('Walls and terrain cleared. Endpoints kept.');});
 algorithms.forEach(a => {
   const grid = $('grid-' + a);
+  grid.addEventListener('focusin', e => {const b = e.target.closest('button.cell'); if (b) rememberFocus(a, Number(b.dataset.index));});
   grid.addEventListener('click', e => {const cell = e.target.closest('button.cell'); if (cell) edit(Number(cell.dataset.index));});
   grid.addEventListener('pointerdown', e => {const b = e.target.closest('button.cell'); if (b && ['wall', 'erase', 'weight'].includes($('tool').value)) {paint = {id: e.pointerId, mode: $('tool').value, last: Number(b.dataset.index), moved: false};}});
   grid.addEventListener('pointermove', e => {if (!paint || paint.id !== e.pointerId || !e.buttons) return; const b = document.elementFromPoint(e.clientX, e.clientY)?.closest('button.cell'); if (b && b.closest('.grid') === grid) {const i = Number(b.dataset.index); if (i !== paint.last) {if (!paint.moved) edit(paint.last, paint.mode); paint.moved = true; paint.last = i; edit(i, paint.mode);}}});
@@ -69,4 +81,6 @@ algorithms.forEach(a => {
 });
 window.addEventListener('pointerup', () => {paint = null;});
 window.addEventListener('pointercancel', () => {paint = null;});
+$('tool').addEventListener('change', updateTool);
+updateTool();
 loadExample();

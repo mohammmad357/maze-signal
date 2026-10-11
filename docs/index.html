@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="wrap">
-  <header><a class="brand" href="https://github.com/mohammmad357/maze-signal">◈ MAZE SIGNAL</a><nav><a href="intro.gif">60-second tour</a><a href="https://github.com/mohammmad357/maze-signal">Python &amp; C source ↗</a></nav></header>
+  <header><a class="brand" href="https://github.com/mohammmad357/maze-signal">◈ MAZE SIGNAL</a><nav><a href="learn.html">How A* searches</a><a href="intro.gif">60-second tour</a><a href="https://github.com/mohammmad357/maze-signal">Python &amp; C source ↗</a></nav></header>
   <main>
     <section class="hero"><p class="eyebrow">A SMALL MAP. A BETTER QUESTION.</p><h1>The shortest route<br>isn’t always the <em>cheapest.</em></h1><p>Draw a maze. Change the terrain. Watch Dijkstra and A* find the same optimal cost — with different search footprints.</p></section>
     <section class="studio" aria-labelledby="studio-title">
@@ -17,9 +17,10 @@
       <div class="controls">
         <label>Example<select id="example"><option value="trap">Weighted detour</option><option value="open">Open grid</option><option value="blocked">No route</option></select></label>
         <label>Paint tool<select id="tool"><option value="wall">Wall</option><option value="erase">Erase</option><option value="start">Start</option><option value="goal">Goal</option><option value="weight">Terrain weight</option></select></label>
-        <label>Weight<select id="weight"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option selected>9</option></select></label>
+        <label>Weight<select id="weight" aria-describedby="tool-help"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option selected>9</option></select></label>
         <label>Animation<select id="speed"><option value="80">Slow</option><option value="25" selected>Normal</option><option value="5">Fast</option><option value="0">Instant</option></select></label>
       </div>
+      <p class="hint" id="tool-help"></p>
       <div class="actions"><button id="run" class="primary">Run comparison</button><button id="pause" disabled>Pause</button><button id="reset">Reset example</button><button id="clear">Clear walls &amp; weights</button></div>
       <p id="status" role="status" aria-live="polite">Ready. Try the weighted detour, or paint a cell.</p>
       <div class="panels">
@@ -31,7 +32,8 @@
     </section>
     <section class="notes"><article><span class="number">01 / THE TRAP</span><h2>Four moves can cost 28.</h2><p>In the default map, crossing three expensive cells takes four moves. Going around takes eight moves and costs only eight. We minimize entry cost, not the number of moves.</p></article><article><span class="number">02 / THE FAIR COMPARISON</span><h2>Same map. Same optimal cost.</h2><p>A* uses Manhattan distance. Every move costs at least one. Both algorithms share the same tie rule: larger cost so far, then smaller cell index. Walls can weaken the heuristic.</p></article><article><span class="number">03 / READ THE METRIC</span><h2>Less search ≠ always faster.</h2><p>Expanded cells count work done by the search. Animation speed is presentation only. This JavaScript demo is separate from the measured Python/C benchmarks in the repository.</p></article></section>
     <details><summary>فارسی — راهنمای کوتاه</summary><div dir="rtl" lang="fa"><p>یک نقشه را در هر دو پنل تغییر بده و «Run comparison» را بزن. S شروع و G مقصد است؛ # دیوار است و عدد هر خانه هزینهٔ ورود را نشان می‌دهد. هدف یافتن کم‌هزینه‌ترین مسیر است، حتی اگر طولانی‌تر باشد.</p><p>با ابزار Start و Goal ابتدا و انتها را جابه‌جا کن؛ باید در دو خانهٔ جدا باشند. Pause مکث می‌کند و Reset نقشهٔ نمونه را برمی‌گرداند. با تغییر نقشه نتیجهٔ قبلی پاک می‌شود. تعداد گره‌های Expanded معیار جست‌وجو است، نه بنچمارک سرعت Python و C.</p></div></details>
-    <footer><p>Four-neighbor movement · weights 1–9 · demo editor limited to 40 × 40</p><a href="https://github.com/mohammmad357/maze-signal/issues">Found something confusing? Open an issue ↗</a><p>MIT licensed · built with AI coding assistance · <a href="README.md">Demo verification notes</a></p></footer>
+    <section class="notes" aria-label="Learn and help improve"><article><span class="number">04 / LEARN</span><h2>140 cells versus 23.</h2><p>Follow one map, see the heuristic, then try a case where it helps less. <a href="learn.html">Read the illustrated walkthrough →</a></p></article><article><span class="number">05 / FEEDBACK</span><h2>Three questions. Your experience.</h2><p>What confused you, what helped, and what is missing? <a href="feedback.html">Choose a feedback form →</a></p></article><article><span class="number">06 / COME BACK</span><h2>Was a second visit useful?</h2><p>If you used the demo again, tell us why. Actual use matters more than a star. <a href="https://github.com/mohammmad357/maze-signal/issues/new?template=return-use.yml">Share return-use feedback →</a></p></article></section>
+    <footer><p>Four-neighbor movement · weights 1–9 · demo editor limited to 40 × 40</p><a href="feedback.html">Found something confusing? Open a structured report ↗</a><p>MIT licensed · built with AI coding assistance · <a href="README.md">Demo verification notes</a></p></footer>
   </main>
 </div>
 </body></html>
