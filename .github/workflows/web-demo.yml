@@ -1,0 +1,24 @@
+name: browser-demo-parity
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build native reference
+        run: mkdir -p build && gcc -std=c11 -O3 -Wall -Wextra -Wpedantic -Werror c/solver.c -o build/solver
+      - name: Verify browser against committed fixtures
+        run: node docs/verify.cjs
+      - name: Regenerate fixtures and verify all three implementations
+        run: |
+          python tools/make_web_fixtures.py
+          node docs/verify.cjs
+          git diff --exit-code -- docs/fixtures.json
