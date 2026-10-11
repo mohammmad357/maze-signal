@@ -1,0 +1,12 @@
+{
+  "platform": "Windows-10-10.0.19045-SP0",
+  "processor": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "compiler": "gcc (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r4) 15.2.0",
+  "size": 160,
+  "seed": 357,
+  "repeats": 30,
+  "samples": 5,
+  "clock": "Wall time on Windows (perf_counter / CRT clock); CPU time on Linux (process_time / clock)",
+  "flags": "-std=c11 -O3 -Wall -Wextra -Wpedantic"
+}
