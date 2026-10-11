@@ -135,3 +135,8 @@ results/              Report, raw samples and environment metadata
 [Red Blob Games: Introduction to A*](https://www.redblobgames.com/pathfinding/a-star/introduction.html) is an excellent visual explanation of weighted graph search and heuristics. The implementations, tests and assets here are original to this project; no external code or artwork is bundled.
 
 MIT licensed. Contributions that include correctness evidence and reproducible measurements are welcome.
+
+## Help improve this project
+
+Try the quick start, report a reproducible issue, or pick a small documentation improvement.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for reporting details, development checks and evidence expected for changes.
