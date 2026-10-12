@@ -19,3 +19,7 @@ An eligible international payment route is not available yet. You can still help
 [حمایت ریالی در کافی‌بده](https://www.coffeebede.com/mohammad_cloner)
 
 این گزینه برای پرداخت داخلی است و درگاه کارت خارجی یا رمزارز نیست. مسیر دریافت بین‌المللی هنوز آماده نیست. گزارش باگ قابل‌بازتولید، بازخورد واقعی و اصلاح مستندات هم کمک ارزشمندی هستند.
+
+[![QR: Coffeebede domestic support](https://raw.githubusercontent.com/mohammmad357/mohammmad357/main/support-qr.png)](https://www.coffeebede.com/mohammad_cloner)
+
+Scan for the domestic payment page / اسکن برای صفحهٔ حمایت ریالی.
