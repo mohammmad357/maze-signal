@@ -1,17 +1,21 @@
-# Support the work
+# Support this work / حمایت از پروژه‌ها
 
-These educational projects focus on reproducible algorithms, storage recovery and simulation. They were developed with AI assistance and include explicit test and model boundaries.
+These educational projects are developed with AI assistance. Voluntary support helps with maintenance, reproducing bugs, and Persian/English documentation. Donations do not purchase a feature, a response deadline, or commercial support. Project use remains governed by each repository's license.
 
-## Purpose of any future financial support
+## Payments in Iranian toman
 
-- Time to reproduce bugs, maintain small fixes and run relevant checks.
-- Clearer examples, bilingual documentation and accessible first-use guidance.
-- Actual project expenses only when documented with an amount and purpose.
+[Support Mohammad Javad Cloner on Coffeebede](https://www.coffeebede.com/mohammad_cloner)
 
-No donation target, income figure or paid hosting expense is claimed. No receipt or expense ledger is being invented. A future report will record actual funds received and actual expenses separately; maintainer time is a purpose, not a fabricated cash expense.
+This is a domestic payment option. It is not an international card or cryptocurrency payment gateway.
 
-**No verified financial-support destination is configured today.** A payment link will be added only after eligibility and the destination have been checked. There are no premium support tiers, promised delivery dates, investment offers or guaranteed results.
+## International supporters
 
-## Help now without paying
+An eligible international payment route is not available yet. You can still help by reporting a reproducible bug, sharing an honest first-use impression, or contributing documentation. Please do not send money to an unlisted address or intermediary.
 
-Try the [demo](https://mohammmad357.github.io/maze-signal/), submit a [reproducible issue](https://github.com/mohammmad357/maze-signal/issues), improve documentation, or work on a scoped issue after discussing the approach. Star or share a project only if you find it useful. Genuine feedback is more useful at this stage than an invented rating.
+## فارسی
+
+حمایت اختیاری شما صرف زمان نگهداری، بازتولید خطاها و مستندات فارسی و انگلیسی می‌شود. پروژه‌ها با کمک هوش مصنوعی توسعه یافته‌اند. حمایت مالی تضمین تحویل قابلیت، پاسخ فوری یا پشتیبانی تجاری ایجاد نمی‌کند؛ استفاده از هر پروژه طبق مجوز همان مخزن است.
+
+[حمایت ریالی در کافی‌بده](https://www.coffeebede.com/mohammad_cloner)
+
+این گزینه برای پرداخت داخلی است و درگاه کارت خارجی یا رمزارز نیست. مسیر دریافت بین‌المللی هنوز آماده نیست. گزارش باگ قابل‌بازتولید، بازخورد واقعی و اصلاح مستندات هم کمک ارزشمندی هستند.
