@@ -72,6 +72,34 @@ python -m unittest discover -s tests -v
 
 The JSON output reports `cost`, `expanded`, `path` and `seconds`. Path entries are zero-based row-major cell indices: `row = index // width`, `column = index % width`. Unreachable goals produce `cost: null` and an empty path, with successful exit status. Invalid input produces a nonzero exit status.
 
+## Check your first run
+
+For `maps/trap.txt`, both `astar` and `dijkstra` should return these fields
+(the `seconds` value depends on your machine):
+
+```json
+{"cost": 8, "expanded": 9, "path": [0, 5, 10, 11, 12, 13, 14, 9, 4]}
+```
+
+Decode the path with width 5: it travels down the left edge, across the bottom,
+then up to the goal. The start contributes zero; the eight entered cells each cost one.
+
+To distinguish an unreachable goal from invalid input, save this valid map as
+`unreachable.txt` in the repository root:
+
+```text
+1 3
+S#G
+```
+
+```sh
+python python/solver.py unreachable.txt astar
+```
+
+The result has `"cost": null`, `"expanded": 1` and `"path": []`, plus timing.
+This is a successful search with no route, so the exit status is zero. A malformed
+map instead fails with a nonzero exit status. The C solver follows the same distinction.
+
 ## Input contract
 
 First line: `height width`, each in **1..1024**. Then exactly `height` rows of `width` cells. LF and CRLF are supported.
