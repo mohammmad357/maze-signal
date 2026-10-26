@@ -100,6 +100,20 @@ The result has `"cost": null`, `"expanded": 1` and `"path": []`, plus timing.
 This is a successful search with no route, so the exit status is zero. A malformed
 map instead fails with a nonzero exit status. The C solver follows the same distinction.
 
+## First-run troubleshooting
+
+| Symptom | What to check |
+|---|---|
+| Python cannot open `python/solver.py` or `maps/trap.txt` | Run the commands from the cloned `maze-signal` directory. Relative paths are resolved from your current working directory. |
+| `gcc` is not found | The C version needs a C11 compiler on your PATH. The Python solver and browser demo can be used without compiling C. |
+| Tests report `Compile c/solver.c into build/solver first` | Build the C executable using the commands above before running the differential suite. The default Windows path is `build/solver.exe`; on Linux/macOS it is `build/solver`. |
+| A hand-written map is rejected | Save it as plain ASCII text. Check the height/width, exact row lengths, allowed cells, and exactly one `S` and one `G`. Do not include Markdown fences in the file. |
+
+The test suite compares both implementations; a working Python-only run does not
+replace the C build or the differential checks. When reporting a problem, include
+the exact command, full error text, operating system and the smallest map that
+reproduces it; see [the contribution guide](CONTRIBUTING.md).
+
 ## Input contract
 
 First line: `height width`, each in **1..1024**. Then exactly `height` rows of `width` cells. LF and CRLF are supported.
