@@ -9,7 +9,7 @@ body:
     id: steps
     attributes:
       label: Steps to reproduce / مراحل بازتولید
-      description: Include example, paint tool, cells edited, and run/reset/pause sequence.
+      description: For the browser demo, include edits and run/reset/pause steps. For Python/C, include the exact command and algorithm.
     validations:
       required: true
   - type: textarea
@@ -27,6 +27,19 @@ body:
   - type: input
     id: environment
     attributes:
-      label: Browser, device type and release/commit
+      label: Environment and release/commit
+      description: Browser/device for the demo; OS, Python version and C compiler version (if used) for command-line runs.
     validations:
       required: true
+  - type: textarea
+    id: map
+    attributes:
+      label: Smallest failing map / کوچک‌ترین نقشه مشکل‌دار
+      description: Paste plain ASCII map text, including the height/width line. For browser-only problems, describe the grid or attach a screenshot if text is unavailable.
+      render: text
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Command output or error / خروجی یا خطا
+      description: Include the JSON output, full error text and exit status when available. A valid map with no route returns cost null and exit status zero.
+      render: text
